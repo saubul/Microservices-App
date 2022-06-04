@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService{
 			return null;
 		}
 		return new ResponseTemplateDTO(userRepository.findById(id).get(),
-									   restTemplate.getForObject("http://localhost:9001/departments/" + user.getDepartmentId(), 
+									   restTemplate.getForObject("http://DEPARTMENT-SERVICE/departments/" + user.getDepartmentId(), 
 											   					 DepartmentDTO.class));
 	}
 	
